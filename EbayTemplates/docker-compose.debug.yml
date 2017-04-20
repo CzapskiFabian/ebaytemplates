@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  ebaytemplates:
+    image: ebaytemplates:debug
+    build:
+      context: .
+      dockerfile: Dockerfile.debug
+    ports:
+      - "80:80"
+    environment:
+      - REMOTE_DEBUGGING
